@@ -43,9 +43,6 @@ class Layer:
     def backward(self, grad):
         raise NotImplementedError
     
-    def update(self, lr):
-        pass
-    
 class Linear(Layer):
     def __init__(self, num_in, num_out):
         self.num_in = num_in
@@ -92,7 +89,6 @@ class SoftmaxCrossEntropy(Layer):
     
 activation_dict = {
     'relu': ReLU,
-    'softmax': SoftmaxCrossEntropy
 }
 
 
